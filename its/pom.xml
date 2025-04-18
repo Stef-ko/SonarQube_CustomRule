@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.sonarsource.java</groupId>
+    <artifactId>java</artifactId>
+    <version>8.13.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>java-its</artifactId>
+  <packaging>pom</packaging>
+
+  <name>SonarQube Java :: ITs</name>
+
+  <modules>
+    <module>autoscan</module>
+    <module>plugin</module>
+    <module>ruling</module>
+  </modules>
+
+  <properties>
+    <skipTests>true</skipTests>
+    <maven.deploy.skip>true</maven.deploy.skip>
+  </properties>
+
+</project>
