@@ -7,26 +7,27 @@ class MyClass {
   MyClass(MyClass mc) { }
 
   int     foo1() {
-    log.info("This is a valid test");
+    log.error("This is a valid test");
   }
 
   void    foo2(int value) {
-    log.info("This is another valid test");
+    log.warn("This is another valid test");
   }
+
+  void    foo2(int value) { log.info("This is another valid test"); }
 
   int     foo3(int value) {
     String password = "PASSWORD";
-    log.info("This is not a valid test, because it contains a password: {}", password);
+    log.info("This is not a valid test, because it contains a password: {}", password); // Noncompliant
     return 0;
-  } // Noncompliant
+  }
 
   Object  foo4(int value) { return null; }
 
   MyClass foo5(MyClass value) {
     String password = "PASSWORD";
-    log.info("This is not a valid test, because it contains an encoded password: {}",
-      Base64.getEncoder().encodeToString(password.getBytes(StandardCharsets.UTF_8)));
-  } // Noncompliant
+    log.info("This is also not a valid test, because it contains the password {}", password); // Noncompliant
+  }
 
   int     foo6(int value, String name) { return 0; }
 

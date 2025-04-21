@@ -21,6 +21,7 @@ public class MyFirstCustomCheck extends IssuableSubscriptionVisitor {
   @Override
   public void visitNode(Tree tree) {
     MethodTree method = (MethodTree) tree;
+
     if (method.parameters().size() == 1) {
       Symbol.MethodSymbol symbol = method.symbol();
       Type firstParameterType = symbol.parameterTypes().get(0);

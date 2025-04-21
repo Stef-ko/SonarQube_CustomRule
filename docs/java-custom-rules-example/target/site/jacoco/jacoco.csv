@@ -1,0 +1,19 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,AvoidSuperClassRule,38,0,4,0,10,0,6,0,4,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,AvoidMethodDeclarationRule,21,0,0,0,7,0,3,0,3,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,NoIfStatementInTestsRule.IfStatementVisitor,18,0,0,0,6,0,4,0,4,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,AvoidTreeListRule,17,0,2,0,5,0,4,0,3,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,NoIfStatementInTestsRule,42,0,4,0,14,0,6,0,4,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,MyCustomSubscriptionRule,37,0,4,0,10,0,5,0,3,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,AvoidBrandInMethodNamesRule,43,0,2,0,10,0,5,0,4,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,MyFirstCustomCheck,0,38,0,4,0,10,0,5,0,3
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,AvoidLoggingPasswordsRule,0,59,2,8,0,15,2,6,0,3
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,SecurityAnnotationMandatoryRule,181,0,18,0,46,0,16,0,7,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,SpringControllerRequestMappingEntityRule,70,0,8,0,15,0,7,0,3,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,AvoidAnnotationRule,65,0,6,0,14,0,6,0,3,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.utils,PrinterVisitor,94,0,6,0,23,0,8,0,5,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.utils,StringUtils,0,27,0,6,0,5,0,5,0,2
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java,RulesList,69,0,0,0,6,0,3,0,3,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java,MyJavaFileCheckRegistrar,13,0,0,0,5,0,4,0,4,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java,MyJavaRulesPlugin,12,0,0,0,4,0,2,0,2,0
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java,MyJavaRulesDefinition,53,0,0,0,15,0,5,0,5,0

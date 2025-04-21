@@ -1,0 +1,5 @@
+org/sonar/samples/java/utils/FilesUtils.class
+org/sonar/samples/java/checks/AvoidLoggingPasswordsRuleTest.class
+org/sonar/samples/java/utils/FilesUtils$1.class
+org/sonar/samples/java/utils/StringUtilsTest.class
+org/sonar/samples/java/checks/MyFirstCustomCheckTest.class

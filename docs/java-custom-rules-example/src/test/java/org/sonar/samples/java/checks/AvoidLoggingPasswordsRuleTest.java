@@ -12,5 +12,4 @@ class AvoidLoggingPasswordsRuleTest {
       .withCheck(new AvoidLoggingPasswordsRule())
       .verifyIssues();
   }
-
 }
