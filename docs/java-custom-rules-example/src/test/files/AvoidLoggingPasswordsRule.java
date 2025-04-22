@@ -42,4 +42,9 @@ class MyClass {
   int     foo9(String value) {
     log.info( "This is a password {}", Base64.getEncoder().encodeToString(password.getBytes(StandardCharsets.UTF_8))); // Noncompliant
   }
+
+  int     foo10() {
+    String password = "PASSWORD";
+    log.warn("Password {}", password); // Noncompliant
+  }
 }

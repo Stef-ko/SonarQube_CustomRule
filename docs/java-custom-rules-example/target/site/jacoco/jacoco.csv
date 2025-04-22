@@ -7,7 +7,7 @@ SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.c
 SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,MyCustomSubscriptionRule,37,0,4,0,10,0,5,0,3,0
 SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,AvoidBrandInMethodNamesRule,43,0,2,0,10,0,5,0,4,0
 SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,MyFirstCustomCheck,0,38,0,4,0,10,0,5,0,3
-SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,AvoidLoggingPasswordsRule,14,139,7,25,2,34,7,15,0,6
+SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,AvoidLoggingPasswordsRule,14,135,6,24,2,34,6,15,0,6
 SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,SecurityAnnotationMandatoryRule,181,0,18,0,46,0,16,0,7,0
 SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,SpringControllerRequestMappingEntityRule,70,0,8,0,15,0,7,0,3,0
 SonarQube Java :: Documentation :: Custom Rules Example,org.sonar.samples.java.checks,AvoidAnnotationRule,65,0,6,0,14,0,6,0,3,0

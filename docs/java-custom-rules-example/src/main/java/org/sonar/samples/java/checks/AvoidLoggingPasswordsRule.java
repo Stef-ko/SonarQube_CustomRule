@@ -18,7 +18,7 @@ public class AvoidLoggingPasswordsRule extends IssuableSubscriptionVisitor {
 
   @Override
   public List<Kind> nodesToVisit() {
-    return Collections.singletonList(Tree.Kind.METHOD_INVOCATION);
+    return Collections.singletonList(Tree.Kind.METHOD_INVOCATION); // returns list with all method invocation
   }
 
   @Override
@@ -31,11 +31,14 @@ public class AvoidLoggingPasswordsRule extends IssuableSubscriptionVisitor {
       String methodName = memberSelect.identifier().name();
       String expression = memberSelect.expression().toString();
 
-      if (methodName.equals("info") && expression.matches(".*log$")) {
+      // Checks, if invoked method is log.*
+      if (expression.matches(".*log$")) {
         List<ExpressionTree> arguments = methodInvocation.arguments();
+
+        // Iterate over method arguments of log.
         for (ExpressionTree arg : arguments) {
           if (containsEncodedPassword(arg)) {
-            reportIssue(methodInvocation, "Don't log passwords, CUNT!");
+            reportIssue(methodInvocation, "Don't log passwords");
           }
         }
       }
@@ -49,12 +52,13 @@ public class AvoidLoggingPasswordsRule extends IssuableSubscriptionVisitor {
   }
 
   private boolean containsPasswordIdentifier(Tree tree) {
-
+    // check if tree contains password
     if (tree instanceof IdentifierTree) {
       String name = ((IdentifierTree) tree).name().toLowerCase();
       return name.contains("password") || name.contains("pwd") || name.contains("pass");
     }
 
+    // Recurse into method invocations like Base64.getEncoder().encodeToString(...)
     if (tree instanceof MethodInvocationTree) {
       MethodInvocationTree method = (MethodInvocationTree) tree;
       for (ExpressionTree arg : method.arguments()) {
@@ -65,11 +69,13 @@ public class AvoidLoggingPasswordsRule extends IssuableSubscriptionVisitor {
       return containsPasswordIdentifier(method.methodSelect());
     }
 
+    // Recurse into member selections like password.getBytes()
     if (tree instanceof MemberSelectExpressionTree) {
       MemberSelectExpressionTree member = (MemberSelectExpressionTree) tree;
       return containsPasswordIdentifier(member.expression());
     }
 
+    // Handle type casts, parentheses, etc
     if (tree instanceof UnaryExpressionTree) {
       return containsPasswordIdentifier(((UnaryExpressionTree) tree).expression());
     }
