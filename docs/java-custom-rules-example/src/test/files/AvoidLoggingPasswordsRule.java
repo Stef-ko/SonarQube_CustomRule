@@ -32,4 +32,14 @@ class MyClass {
   int     foo6(int value, String name) { return 0; }
 
   int     foo7(int ... values) { return 0;}
+
+  int     foo8(int value) {
+    String password = "PASSWORD";
+    log.info( // Noncompliant
+            "This is also not a valid test, because it contains the password {}", password);
+  }
+
+  int     foo9(String value) {
+    log.info( "This is a password {}", Base64.getEncoder().encodeToString(password.getBytes(StandardCharsets.UTF_8))); // Noncompliant
+  }
 }
